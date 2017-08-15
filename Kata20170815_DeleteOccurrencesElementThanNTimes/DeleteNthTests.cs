@@ -45,25 +45,13 @@ namespace Kata20170815_DeleteOccurrencesElementThanNTimes
     {
         public int[] DeleteNth(int[] arr, int time)
         {
-            var dic = new Dictionary<int, int>();
             var result = new List<int>();
             foreach (var item in arr)
             {
-                if (dic.ContainsKey(item))
+                if (result.Count(a => a == item) < time)
                 {
-                    if (dic[item] >= time)
-                    {
-                        continue;
-                    }
-
-                    dic[item] += 1;
+                    result.Add(item);
                 }
-                else
-                {
-                    dic.Add(item, 1);
-                }
-
-                result.Add(item);
             }
 
             return result.ToArray();
