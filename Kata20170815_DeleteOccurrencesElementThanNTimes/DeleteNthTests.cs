@@ -44,7 +44,7 @@ namespace Kata20170815_DeleteOccurrencesElementThanNTimes
                         continue;
                     }
 
-                    dic[item] = dic[item]++;
+                    dic[item] += 1;
                 }
                 else
                 {
