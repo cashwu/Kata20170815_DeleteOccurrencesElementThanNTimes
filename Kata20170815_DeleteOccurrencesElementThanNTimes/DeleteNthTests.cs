@@ -21,6 +21,18 @@ namespace Kata20170815_DeleteOccurrencesElementThanNTimes
             DeleteNthShouldBe(new[] { 1, 2, 1 }, new[] { 1, 2, 1 }, 2);
         }
 
+        [TestMethod]
+        public void input_c1()
+        {
+            DeleteNthShouldBe(new[] { 20, 37, 21 }, new[] { 20, 37, 20, 21 }, 1);
+        }
+
+        [TestMethod]
+        public void input_c2()
+        {
+            DeleteNthShouldBe(new[] { 1, 1, 3, 3, 7, 2, 2, 2 }, new[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3);
+        }
+
         private static void DeleteNthShouldBe(int[] expected, int[] array, int time)
         {
             var kata = new Kata();
